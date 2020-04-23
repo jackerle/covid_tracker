@@ -7,7 +7,7 @@ function List_Province(props){
 
     const [province_latlong,setProvince_latlong] = useState(p_latlong)
     const [valueSearch,setValueSearch] = useState("")
-    const { covid_sum } = props
+    const { covid_sum , onSelectProvince } = props
 
     
     const list_province = Object.keys(province_latlong).map((key,index)=>{
@@ -15,7 +15,7 @@ function List_Province(props){
         
         if(valueSearch==""){
             return(
-                <div key={`${province_en}`} className= {"list_province"}>
+                <div key={`${province_en}`} className= {"list_province"} onClick={()=>{onSelectProvince(province_en)}}>
                     <h4>{province_thai}  : {covid_sum[province_en]} คน</h4>
                     <hr/>
                 </div> 
@@ -23,7 +23,7 @@ function List_Province(props){
         }
         else if (province_thai.indexOf(valueSearch)!=-1){
             return(
-                <div key={`${province_en}`} className= {"list_province"}>
+                <div key={`${province_en}`} className= {"list_province"}  onClick={()=>{onSelectProvince(province_en)}}>
                 <h4>{province_thai}   {covid_sum[province_en]} คน</h4>
                 <hr/>
             </div> 

@@ -19,11 +19,25 @@
   z-index: 10;
 }
 
-.marker-icon {
+.marker-icon.red{
   border-width: 1px;
   border-style: solid;
   border-radius: 50%;
-  background-color: brown;
+  background-color: red;
+  opacity: 50%;
+}
+.marker-icon.pink{
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+  background-color: rgb(255, 129, 150);
+  opacity: 50%;
+}
+.marker-icon.green{
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+  background-color: green;
   opacity: 50%;
 }
 
@@ -108,4 +122,8 @@
 
 .list_province:hover{
   background-color: rgb(182, 182, 182);
+}
+
+#close {
+  cursor: pointer;
 }
