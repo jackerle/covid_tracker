@@ -27,8 +27,9 @@ function MapView(props){
       //console.log(id+" "+province)
       let title = province_thai;
       let icn
-      if(covid_sum[province_en]>500)icn = icon.red;
-      else if(covid_sum[province_en]>=70) icn = icon.pink;
+      let sum = covid_sum[province_en]
+      if(sum>500)icn = icon.red;
+      else if(sum>=70) icn = icon.pink;
       else icn = icon.green;
       return (
         
@@ -40,7 +41,7 @@ function MapView(props){
             onSelectProvince(province_en)
           }}
         >
-          <Popup>กำลังคิดอยู่ว่าจะใส่อะไร</Popup>
+          <Popup>{title} : {sum} คน กำลังคิดอยู่ว่าจะใส่อะไรอีกดี</Popup>
         </Marker>
       )
     })
