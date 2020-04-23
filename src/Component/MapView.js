@@ -41,7 +41,7 @@ function MapView(props){
             onSelectProvince(province_en)
           }}
         >
-          <Popup>{title} : {sum} คน กำลังคิดอยู่ว่าจะใส่อะไรอีกดี</Popup>
+          <Popup>{title} มีผู้ป่วย {sum} คน</Popup>
         </Marker>
       )
     })
