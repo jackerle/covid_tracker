@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Map, TileLayer, Marker, Popup} from 'react-leaflet'
 import {divIcon} from 'leaflet';
 
@@ -37,12 +37,15 @@ function MapView(props){
           position = {[lat,long]}
           icon = {icn}
         >
-          <Popup>{title}</Popup>
+          <Popup>กำลังคิดอยู่ว่าจะใส่อะไร</Popup>
         </Marker>
       )
     })
 
+
+
     return(
+
         <Map className="map-view" center={mapCenter} zoom={13}>
           {console.log(province_latlong)}
         <TileLayer
