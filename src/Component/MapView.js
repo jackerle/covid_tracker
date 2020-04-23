@@ -3,6 +3,7 @@ import { Map, TileLayer, Marker, Popup} from 'react-leaflet'
 import {divIcon} from 'leaflet';
 
 
+
 function MapView(props){
 
     const {province_latlong} = props
@@ -13,6 +14,7 @@ function MapView(props){
       //console.log(id+" "+province)
       let title = province;
       return (
+        
         <Marker
           key = {`province-${id}`}
           position = {[lat,long]}

@@ -1,3 +1,17 @@
+.list-view{
+  background-color:white ;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 350px;
+  z-index: 30;
+}
+
+
+
 .map-view{
   width: 100vw;
   height: 100vh;
@@ -10,5 +24,58 @@
   border-radius: 50%;
   background-color: brown;
   opacity: 50%;
-  
+}
+
+.marker-icon .popup-marker{
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.marker-icon:hover .popup-marker{
+  visibility: visible;
+}
+
+
+.ui-button-content{
+  background-color: #CE9DD9; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.list-view-content-detail{
+}
+
+.list-view-content{
+  background-color: #CE9DD9; /* Green */
+  border: none;
+}
+
+.list-view-content-detail {
+  font-size: 20px;
+  text-align: center;
+}
+
+.list-view-header{
+  background-color: #B399D4;
+}
+
+.list-view-header h5{
+  text-align: center;
+  font-size: 15px;
+  margin-block-end:5px;
+  margin-block-start:0;
 }
