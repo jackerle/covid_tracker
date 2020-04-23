@@ -19,7 +19,7 @@ const icon = {
 
 function MapView(props){
 
-    const {province_latlong,mapCenter,covid_sum} = props
+    const {province_latlong,mapCenter,covid_sum,onSelectProvince} = props
 
     const markerCreate = Object.keys(province_latlong).map((key,index)=>{
       //console.log(province_latlong[index]);
@@ -36,6 +36,9 @@ function MapView(props){
           key = {`province-${province_en}`}
           position = {[lat,long]}
           icon = {icn}
+          onclick = {()=>{
+            onSelectProvince(province_en)
+          }}
         >
           <Popup>กำลังคิดอยู่ว่าจะใส่อะไร</Popup>
         </Marker>

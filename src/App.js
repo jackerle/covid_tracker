@@ -59,7 +59,8 @@ function App() {
       <MapView 
         province_latlong={province_latlong} 
         mapCenter = {mapCenter}
-        covid_sum={covid_sum}/>
+        covid_sum={covid_sum}
+        onSelectProvince = {onSelectProvince}/>
     </div>
   );
 }
