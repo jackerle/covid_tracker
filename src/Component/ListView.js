@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Button } from 'semantic-ui-react';
+import List_Province from './ListViewComponent/List_Province';
 
 function ListView(props){
 
-    const { covid_today } = props
-    
+    const { covid_today , covid_sum} = props
+
     const [today_content,setToday_content] = useState(true)
 
     const enableToday = ()=>{
@@ -67,7 +68,7 @@ function ListView(props){
             <div className="list-view-header">
                 <h2 style={{"text-align":"center"}}>Covid Tracker</h2>
                 <hr/>
-                <h5>สถานการณ์ปัจจุบัน</h5>
+                <h5>สถานการณ์ปัจจุบัน-ประเทศไทย</h5>
             </div>
             <div className="list-view-content">
                     <Button className="ui-button-content" onClick={enableToday} style={{'opacity':today_content?'1':'0.4',}}>Today</Button>
@@ -75,7 +76,7 @@ function ListView(props){
                 {list_all()}
                 {list_today()}
             </div>
-
+            <List_Province covid_sum={covid_sum}/>
         </div>
     );
 }

@@ -14,11 +14,22 @@ const api = {
 function App() {
 
   const [province_latlong,setProvince_latlong] = useState(p_latlong);
-  const [covid_today,setCovidToday_Province] = useState(null)
+  const [covid_today,setCovidToday_Province] = useState({})
+  const [covid_sum,setCovidSum] = useState({})
 
   useEffect(()=>{
+
+    //get today 
     Axios.get(api.today).then(res=>{
       setCovidToday_Province(res.data)
+    }).catch(err=>{
+      console.log(err)
+    })
+
+    //get province sum
+    Axios.get(api.province_covid).then(res=>{
+      console.log(res.data.Province)
+      setCovidSum(res.data.Province)
     }).catch(err=>{
       console.log(err)
     })
@@ -27,7 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      <ListView covid_today = {covid_today}/>
+      <ListView covid_today = {covid_today} covid_sum={covid_sum}/>
       <MapView province_latlong={province_latlong}/>
     </div>
   );
