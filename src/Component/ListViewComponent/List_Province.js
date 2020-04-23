@@ -1,30 +1,32 @@
 import React, { useState } from 'react'
 import { Input } from 'semantic-ui-react'
-
+import p_latlong from '../../LatLong/province.json'
 
 
 function List_Province(props){
 
+    const [province_latlong,setProvince_latlong] = useState(p_latlong)
     const [valueSearch,setValueSearch] = useState("")
     const { covid_sum } = props
 
     
-    const list_province = Object.keys(covid_sum).map((key,index)=>{
+    const list_province = Object.keys(province_latlong).map((key,index)=>{
+        const {province_en,province_thai} = province_latlong[index]
         
         if(valueSearch==""){
             return(
-                <div key={`${key}`} className= {"list_province"}>
-                    <h4>{key}     {covid_sum[key]} คน</h4>
+                <div key={`${province_en}`} className= {"list_province"}>
+                    <h4>{province_thai}  : {covid_sum[province_en]} คน</h4>
                     <hr/>
                 </div> 
             )
         }
-        else if (key.toUpperCase().indexOf(valueSearch.toUpperCase())!=-1){
+        else if (province_thai.indexOf(valueSearch)!=-1){
             return(
-                <div key={`${key}`} className={"list_province"}>
-                    <h4>{key}     {covid_sum[key]} คน</h4>
-                    <hr/>
-                </div>
+                <div key={`${province_en}`} className= {"list_province"}>
+                <h4>{province_thai}   {covid_sum[province_en]} คน</h4>
+                <hr/>
+            </div> 
             )
         }
        

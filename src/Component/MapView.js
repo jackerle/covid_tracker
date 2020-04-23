@@ -10,13 +10,13 @@ function MapView(props){
 
     const markerCreate = Object.keys(province_latlong).map((key,index)=>{
       //console.log(province_latlong[index]);
-      const {id,province,lat,long} = province_latlong[index]
+      const {province_en,province_thai,lat,long} = province_latlong[index]
       //console.log(id+" "+province)
-      let title = province;
+      let title = province_thai;
       return (
         
         <Marker
-          key = {`province-${id}`}
+          key = {`province-${province_en}`}
           position = {[lat,long]}
           icon = {divIcon({className:'marker-icon',iconSize:[16,16]})}
         >

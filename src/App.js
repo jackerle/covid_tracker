@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      <ListView covid_today = {covid_today} covid_sum={covid_sum}/>
+      <ListView covid_today = {covid_today} covid_sum={covid_sum} />
       <MapView province_latlong={province_latlong}/>
     </div>
   );

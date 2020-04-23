@@ -4,9 +4,10 @@ import List_Province from './ListViewComponent/List_Province';
 
 function ListView(props){
 
-    const { covid_today , covid_sum} = props
+    const { covid_today , covid_sum,province_latlong} = props
 
     const [today_content,setToday_content] = useState(true)
+
 
     const enableToday = ()=>{
         setToday_content(true);
@@ -76,7 +77,7 @@ function ListView(props){
                 {list_all()}
                 {list_today()}
             </div>
-            <List_Province covid_sum={covid_sum}/>
+            <List_Province covid_sum={covid_sum} />
         </div>
     );
 }
