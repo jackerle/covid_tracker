@@ -5,8 +5,8 @@ import 'leaflet/dist/leaflet.css';
 import p_latlong from './LatLong/province.json'
 import ListView from './Component/ListView';
 import Axios from 'axios';
-import Template_Modal from './Component/Template_Modal';
-import Start_modal from './Component/Start_modal'
+import Template_Modal from './Component/Modal/Template_Modal';
+import Start_modal from './Component/Modal/Start_modal'
 
 
 const api = {
