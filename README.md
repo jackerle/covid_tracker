@@ -1,7 +1,7 @@
-##Province lat&long from Google map
+#Province lat&long from Google map
 ##Created with React+leafletjs
 
-#installed
+###installed
 1. clone this repository
 $git clone https://github.com/jackerle/covid_tracker
 
