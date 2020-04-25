@@ -26,8 +26,12 @@ function MapView(props){
       const {province_en,province_thai,lat,long} = province_latlong[index]
       //console.log(id+" "+province)
       let title = province_thai;
-      let icn
-      let sum = covid_sum[province_en]
+      let icn,sum
+      if(covid_sum[province_en]>0)
+        sum = covid_sum[province_en]
+      else 
+        sum = 0;
+        
       if(sum>500)icn = icon.red;
       else if(sum>=70) icn = icon.pink;
       else icn = icon.green;

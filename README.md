@@ -1,4 +1,5 @@
-# Covid Tracker 1.0 by. jackerle
+# Covid Tracker by. jackerle
+## Version 1.0.1
 ## Created with React+leafletjs
 
 ### installed
@@ -16,3 +17,9 @@ $npm install
 ```
 $npm start
 ```
+
+### v.1.0.0 
+release
+
+### v.1.0.1
+- เพิ่ม 7 จังหวัดที่ไม่มีผู้ติดเชื้อและไม่มีรายชื่อใน api 

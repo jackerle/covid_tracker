@@ -64,4 +64,16 @@
 {"province_en":"Yasothon" ,"province_thai":"ยโสธร" ,"lat":15.792641 ,"long": 104.14528270000005},
 {"province_en":"Phetchabun" ,"province_thai":"เพชรบูรณ์" ,"lat":16.4189807 ,"long": 101.15509259999999},
 {"province_en":"Sukhothai" ,"province_thai":"สุโขทัย" ,"lat":17.0055573 ,"long": 99.82637120000004},
-{"province_en":"Phrae" ,"province_thai":"แพร่" ,"lat":18.1445774 ,"long": 100.14028310000003}]
+{"province_en":"Phrae" ,"province_thai":"แพร่" ,"lat":18.1445774 ,"long": 100.14028310000003},
+{"province_en":"Singburi" ,"province_thai":"สิงห์บุรี" ,"lat":14.8936253 ,"long": 100.39673140000002},
+{"province_en":"Ang Thong" ,"province_thai":"อ่างทอง" ,"lat":14.5896054 ,"long": 100.45505200000002},
+{"province_en":"Ranong" ,"province_thai":"ระนอง" ,"lat":9.9528702 ,"long": 98.60846409999999},
+{"province_en":"Pichit" ,"province_thai":"พิจิตร" ,"lat":16.4429516 ,"long": 100.34823289999997},
+{"province_en":"Pichit" ,"province_thai":"พิจิตร" ,"lat":16.4429516 ,"long": 100.34823289999997},
+{"province_en":"Nan" ,"province_thai":"น่าน" ,"lat":18.7756318 ,"long": 100.77304170000002},
+{"province_en":"Nakhon Ratchasima" ,"province_thai":"นครราชสีมา" ,"lat":14.9798997 ,"long": 102.09776929999998},
+{"province_en":"Trat" ,"province_thai":"ตราด" ,"lat":12.2427563 ,"long": 102.51747339999997},
+{"province_en":"Chai Nat" ,"province_thai":"ชัยนาท" ,"lat":15.1851971 ,"long": 100.12512500000003},
+{"province_en":"Kamphaeng Phet" ,"province_thai":"กำแพงเพชร" ,"lat":16.4827798 ,"long": 99.52266179999992},
+{"province_en":"Bueng Kan" ,"province_thai":"บึงกาฬ" ,"lat":18.3609104 ,"long": 103.64644629999998}
+]
