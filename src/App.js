@@ -8,7 +8,7 @@ import Axios from 'axios';
 import Template_Modal from './Component/Modal/Template_Modal';
 import Start_modal from './Component/Modal/Start_modal'
 
-
+//api 
 const api = {
   today:"https://covid19.th-stat.com/api/open/today",
   province_covid:"https://covid19.th-stat.com/api/open/cases/sum"
@@ -16,11 +16,18 @@ const api = {
 
 function App() {
 
+  /*set State for react
+  */
+  
   const [province_latlong,setProvince_latlong] = useState(p_latlong);
   const [covid_today,setCovidToday_Province] = useState({})
   const [covid_sum,setCovidSum] = useState({})
   const [mapCenter,setMapCenter] = useState([13.7278956,100.52412349999997])
 
+
+  /**
+   * 
+   */
   const onSelectProvince = useCallback((province_en)=>{
     const latlong = province_latlong.find(obj=>obj.province_en==province_en)
     if(latlong!=undefined){
