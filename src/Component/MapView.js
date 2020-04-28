@@ -16,7 +16,16 @@ const icon = {
 }
 
 
-
+/**
+ * 
+ * @param {object} props
+ * @param {object} props.province_latlong
+ * @param {Array} props.mapCenter
+ * @param {object} props.covid_sum
+ * @param {function onSelectProvince(province_en) {
+   
+ }} props.onSelectProvince
+ */
 function MapView(props){
 
     const {province_latlong,mapCenter,covid_sum,onSelectProvince} = props

@@ -25,9 +25,6 @@ function App() {
   const [mapCenter,setMapCenter] = useState([13.7278956,100.52412349999997])
 
 
-  /**
-   * 
-   */
   const onSelectProvince = useCallback((province_en)=>{
     const latlong = province_latlong.find(obj=>obj.province_en==province_en)
     if(latlong!=undefined){
