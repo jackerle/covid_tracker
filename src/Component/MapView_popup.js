@@ -23,7 +23,7 @@ function MapView_popup(props){
 
                 return(
                     <div key={`popup-map-${No}`} className = 'popup-map-content'>
-                        <h4>อันดับที่ {index+1} : อายุ {Age} ปี เพศ: {Gender}</h4>
+                        <h4>ลำดับที่ {index+1} : อายุ {Age} ปี เพศ: {Gender}</h4>
                         <h4>สัญชาติ: {Nation} อำเภอ/เขต: {District}</h4>
                         <p style={{'font-size':'12px'}}>วันที่ยืนยัน: {ConfirmDate}</p> 
                         <hr/>
@@ -40,8 +40,10 @@ function MapView_popup(props){
             <div className="popup-map-content-wrapper">
             <h1>{title}</h1>
             <h2>มีผู้ป่วย {sum ==undefined? 0:sum} คน</h2>
-            <hr/>
+           
+            <div className = "popup-map-content-list-wrapper">
             {list_inflected}
+            </div>
         </div>
         </ClickAwayListener>
         

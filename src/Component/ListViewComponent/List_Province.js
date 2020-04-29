@@ -55,7 +55,9 @@ function List_Province(props){
     return(
        <div className= "list-view-search">
            <Input type="text" className="search-bar" placeholder='Search province...' onChange={onChangeSearch}/>
+           <div className = "list-province-view-wrapper">
            {list_province}
+           </div>
        </div>
 
     )

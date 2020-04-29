@@ -8,7 +8,6 @@
   left: 0;
   width: 350px;
   z-index: 30;
-  overflow: scroll;
 }
 
 
@@ -130,16 +129,29 @@
 
 .popup-map-content-wrapper{
     background-color: #FFFFFF;
-    border-top: 10px solid #000000;
+    border-top: 10px solid #CE9DD9;
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.15);
     width: 500px;
     height: 600px;
     padding: 20px;
     position: fixed;
-    left: 50%;
-    bottom: 0px;
+    left: 75%;
+    bottom: 25%;
     z-index: 20;
     transform: translateX(-50%);
-    overflow: scroll;
+
     display: block;
+}
+
+
+
+.popup-map-content-list-wrapper{
+    height: 470px;
+  overflow: scroll;
+}
+
+.list-province-view-wrapper{
+  width: 325px;
+  height: 500px;
+  overflow: scroll;
 }
