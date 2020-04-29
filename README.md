@@ -1,5 +1,5 @@
 # Covid Tracker by. jackerle
-## Version 1.0.1
+## Version 1.1.0
 ## Created with React+leafletjs
 
 ### installed
@@ -23,3 +23,8 @@ release
 
 ### v.1.0.1 25/4/2562
 - เพิ่ม 7 จังหวัดที่ไม่มีผู้ติดเชื้อและไม่มีรายชื่อใน api    
+
+### v.1.1.0  29/4/2562
+- เพิ่ม Popup เมื่อ select จังหวัดและแสดงผู้ติดเชื้อในแต่ละเคส
+- สามารถคลิ้กข้างนอก Popup เพื่อปิดตัว Popup ได้
+- เพิ่ม dependency โดยใช้ material-ui เพื่อใช้ทำ ClickAway มาปิด Popup

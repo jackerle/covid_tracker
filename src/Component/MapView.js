@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Map, TileLayer, Marker, Popup} from 'react-leaflet'
 import {divIcon} from 'leaflet';
+import MapView_popup from './MapView_popup';
 
 
 /*
@@ -34,7 +35,7 @@ function MapView(props){
       //console.log(province_latlong[index]);
       const {province_en,province_thai,lat,long} = province_latlong[index]
       //console.log(id+" "+province)
-      let title = province_thai;
+      
       let icn,sum
       if(covid_sum[province_en]>0)
         sum = covid_sum[province_en]
@@ -54,7 +55,9 @@ function MapView(props){
             onSelectProvince(province_en)
           }}
         >
-          <Popup>{title} มีผู้ป่วย {sum} คน</Popup>
+          <Popup>
+            {province_thai} มีผู้ป่วย {sum} คน
+          </Popup>
         </Marker>
       )
     })

@@ -7,11 +7,14 @@ import ListView from './Component/ListView';
 import Axios from 'axios';
 import Template_Modal from './Component/Modal/Template_Modal';
 import Start_modal from './Component/Modal/Start_modal'
+import { popup } from 'leaflet';
+import MapView_popup from './Component/MapView_popup';
 
 //api 
 const api = {
   today:"https://covid19.th-stat.com/api/open/today",
-  province_covid:"https://covid19.th-stat.com/api/open/cases/sum"
+  province_covid:"https://covid19.th-stat.com/api/open/cases/sum",
+  each_case:"https://covid19.th-stat.com/api/open/cases"
 }
 
 function App() {
@@ -23,12 +26,19 @@ function App() {
   const [covid_today,setCovidToday_Province] = useState({})
   const [covid_sum,setCovidSum] = useState({})
   const [mapCenter,setMapCenter] = useState([13.7278956,100.52412349999997])
+  const [selectedLocation,setSelectedLocation] = useState(null)
+  const [eachCase,setEachCase] = useState([])
+
 
 
   const onSelectProvince = useCallback((province_en)=>{
     const latlong = province_latlong.find(obj=>obj.province_en==province_en)
     if(latlong!=undefined){
       setMapCenter([latlong.lat,latlong.long])
+      setSelectedLocation(latlong)
+    }
+    else{
+      setSelectedLocation(null)
     }
   },[province_latlong])
 
@@ -45,12 +55,32 @@ function App() {
 
     //get province sum
     Axios.get(api.province_covid).then(res=>{
-      console.log(res.data.Province)
       setCovidSum(res.data.Province)
     }).catch(err=>{
       console.log(err)
     })
+
+    Axios.get(api.each_case).then(res =>{
+      setEachCase(res.data.Data)
+    }).catch(err=>{
+      console.log(err)
+    })
   },[])
+
+  const mapview_Popup = ()=>{
+    if(selectedLocation != null){
+    return(
+      <MapView_popup 
+        eachCase = {eachCase}
+        province_en = {selectedLocation.province_en}
+        province_thai = {selectedLocation.province_thai}
+        sum = {covid_sum[selectedLocation.province_en]}
+        onSelectProvince = {onSelectProvince}
+        />
+    )
+    }
+  }
+
 
 
   return (
@@ -65,6 +95,7 @@ function App() {
         mapCenter = {mapCenter}
         covid_sum={covid_sum}
         onSelectProvince = {onSelectProvince}/>
+        {mapview_Popup()}
     </div>
   );
 }
