@@ -28,3 +28,6 @@ release
 - เพิ่ม Popup เมื่อ select จังหวัดและแสดงผู้ติดเชื้อในแต่ละเคส
 - สามารถคลิ้กข้างนอก Popup เพื่อปิดตัว Popup ได้
 - เพิ่ม dependency โดยใช้ material-ui เพื่อใช้ทำ ClickAway มาปิด Popup
+
+### v.1.1.1 4/5/2562
+- เพิ่มการทำ CI (Continuos Integration) ให้แก่ Project โดยสามารถ Unit Test ผ่าน Github Actions ได้
