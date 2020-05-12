@@ -15,8 +15,8 @@ function Template_Modal(props){
     return (
         <Modal 
             visible={visible}
-            width = {'1280'}
-            height = {'720'}
+            width = {'640'}
+            height = {'480'}
             effect = {"fadeInUp"} 
             onClickAway = {()=>{
                 offModal();
